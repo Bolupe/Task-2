@@ -1,4 +1,3 @@
-// script.js
 function updateUTCTime() {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentDate = new Date();
@@ -12,5 +11,4 @@ function updateUTCTime() {
 // Update UTC time every second
 setInterval(updateUTCTime, 1000);
 
-// Initial update
 updateUTCTime();
