@@ -12,7 +12,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    height: 90px;
+    height: 60px;
 }
 
 .navbar h1 {
@@ -23,9 +23,20 @@ body {
 
 .container {
     text-align: center;
-    padding: 20px;
-    margin: 10%;
+    padding: 30px;
+    margin: 5%;
+    /* margin-right: 50px;
+    margin-left: 50px; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+section{
+    display: flex;
+}
+
+p{
+    padding: 15px;
+    font-size: 18px;
 }
 
 .container p {
@@ -46,16 +57,21 @@ img {
 a{
     text-decoration: none;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+    cursor: pointer;
+}
+
+i{
+    padding-right: 2px;
 }
 
 button{
-    cursor: pointer;
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
     border: none;
     background-color: #465e75;
+    margin-bottom: 20px;
 }
 
 button:hover{

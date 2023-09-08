@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HNG x Task 2</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="navbar">
-        <img src="./assets/selfie.jpg" alt="Your Slack Username" data-testid="slackDisplayImage">
+        <img data-testid="slackDisplayImage" src="./assets/selfie.jpg" alt="Your Slack Username" >
         <h1 data-testid="slackUserName">Bolupe Taiwo</h1>
     </div>
     
     <div class="container">
-        <p data-testid="currentDayOfTheWeek">Day of the Week</p>
-        <p data-testid="currentUTCTime">UTC Time</p>
-        <p data-testid="myTrack">Track: Front end Development</p>
+        <section>
+            <h2>Day of the Week:</h2>
+            <p data-testid="currentDayOfTheWeek">Thursday</p>
+        </section>
+
+        <section>
+        <h2>UTC Time:</h2>
+        <p data-testid="currentUTCTime" id="time"></p>
+        </section>
+
+        <section>
+        <h2>Track:</h2>
+        <p data-testid="myTrack">Front end Development</p>
+        </section>
         
         <button>
-        <a href="https://github.com/Bolupe/Task-2" data-testid="githubURL" target="_blank">GitHub Repository</a>
+        <i class="fab fa-github fa-lg"></i>
+        <a data-testid="githubURL" href="https://github.com/Bolupe/Task-2" target="_blank">GitHub Repository</a>
         </button>
     </div>
     <script src="script.js"></script>  
