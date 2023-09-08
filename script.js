@@ -1,31 +1,21 @@
-const desiredTime = new Date();
-desiredTime.setUTCHours(8);
-desiredTime.setUTCMinutes(15);
-desiredTime.setUTCSeconds(0);
+function updateDayAndTime() {
+    const currentDayOfTheWeekElement = document.getElementById("currentDayOfTheWeek");
+    const currentTimeElement = document.getElementById("time");
 
-const timestamp = desiredTime.getTime();
+    // Get the current UTC time
+    const currentUtcTime = new Date().toUTCString();
 
-const timeElement = document.getElementById("time");
-timeElement.innerHTML = timestamp.toString();
+    // Get the current day of the week
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDayOfWeek = daysOfWeek[new Date().getUTCDay()];
 
-console.log(timestamp);
+    // Update the elements with the current values
+    currentDayOfTheWeekElement.textContent = currentDayOfWeek;
+    currentTimeElement.textContent = currentUtcTime.slice(17, -7); // Extract and display only the time part
+}
 
+// Call the function to update the day and time initially
+updateDayAndTime();
 
-
-
-
-
-// function updateUTCTime() {
-//     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-//     const currentDate = new Date();
-//     const currentDay = daysOfWeek[currentDate.getUTCDay()];
-//     const currentUTCTime = currentDate.toISOString().substr(11, 8);
-
-//     document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Day of the Week: ${currentDay}`;
-//     document.querySelector('[data-testid="currentUTCTime"]').textContent = `UTC Time: ${currentUTCTime}`;
-// }
-
-// // Update UTC time every second
-// setInterval(updateUTCTime, 1000);
-
-// updateUTCTime();
+// Update the day and time every second
+setInterval(updateDayAndTime, 1000);
